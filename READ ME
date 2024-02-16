@@ -1,1 +1,79 @@
 OS Lab Project
+Workflow:
+User Interface Layer: Begin by implementing the user interface to accept and display user input/output.
+
+Command Parser: Develop the command parser to parse user input into commands and arguments.
+
+Scripting Language Interpreter: Implement the interpreter to execute scripts written in the supported scripting language.
+
+Execution Engine: Develop the execution engine to execute system commands, built-in commands, and scripts.
+
+File System Interaction: Implement file system interaction for commands related to file and directory manipulation.
+Environment Variables Management: Develop the functionality to manage environment variables accessible to the shell and its child processes.
+
+Built-in Commands: Implement built-in commands that are part of the shell itself.
+
+Job Control: Develop functionality for managing background jobs and controlling their execution.
+
+Error Handling: Implement error detection and handling mechanisms for various stages of command execution.
+
+Input/Output Redirection: Develop functionality to handle input/output redirection and piping.
+
+Signals Handling: Implement signal handling mechanisms for signals sent to the shell and its child processes.
+
+History Management: Develop functionality to record and manage command history for the current shell session.
+
+
+User Interface (UI) Layer:
+Provides the interface for user interaction with the shell.
+Implements either a Command-Line Interface (CLI) or a Graphical User Interface (GUI).
+Handles user input and displays output from the shell.
+
+Command Parser:
+Parses user input, breaking it down into commands and arguments.
+Handles special characters, command separators, redirections, and pipelines.
+Validates the syntax of commands and arguments.
+
+Scripting Language Interpreter:
+Implements the scripting language supported by the shell (e.g., Bash scripting).
+Parses and executes script files containing commands written in the scripting language.
+Supports control structures (e.g., loops, conditionals), variable substitution, and function definition/invocation.
+
+Execution Engine:
+Executes system commands and built-in shell commands.
+Manages process creation, termination, and control flow.
+Implements command execution flow (e.g., sequential execution, background execution, job control).
+
+File System Interaction:
+Abstracts interactions with the file system to provide commands for file and directory manipulation.
+Implements file operations such as creation, deletion, renaming, copying, moving, and permission management.
+
+Environment Variables Management:
+Manages environment variables accessible to the shell and its child processes.
+Provides commands for setting, querying, and exporting environment variables.
+Handles variable expansion in command arguments and scripts.
+
+Built-in Commands:
+Implements a set of built-in commands that are part of the shell itself (e.g., cd, echo, export).
+Executes built-in commands directly without invoking external programs.
+
+Job Control:
+Manages the execution of multiple processes in the background.
+Supports features such as job suspension, resumption, and termination.
+Provides commands for monitoring and controlling background jobs.
+
+Error Handling:
+Detects and handles errors occurring during command execution, parsing, or script interpretation.
+Displays meaningful error messages to the user, along with error codes for scripting purposes.
+
+Input/Output Redirection:
+Handles redirection of standard input, output, and error streams.
+Supports features such as file redirection, piping, and process substitution.
+
+Signals Handling:
+Manages the reception and processing of signals sent to the shell and its child processes.
+Handles signals such as SIGINT (interrupt), SIGTERM (terminate), and SIGCHLD (child process status change).
+
+History Management:
+Records and manages the command history for the current shell session.
+Provides commands for querying, searching, and executing previously entered commands.
