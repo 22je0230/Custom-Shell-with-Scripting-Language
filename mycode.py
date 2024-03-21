@@ -62,3 +62,17 @@ def delete_file(path, name):
         return f"Error: Permission denied to delete file at {path}"
     except Exception as e:
         return f"Error: {str(e)}"
+
+def rename_file(path, name, new_name):
+    try:
+        if not os.path.exists(os.path.join(path, name)):
+            raise FileNotFoundError("File not found")
+
+        os.rename(os.path.join(path, name), os.path.join(path, new_name))
+        return f"File '{name}' renamed to '{new_name}' successfully"
+    except FileNotFoundError:
+        return f"Error: File '{name}' not found at {path}"
+    except PermissionError:
+        return f"Error: Permission denied to rename file at {path}"
+    except Exception as e:
+        return f"Error: {str(e)}"
